@@ -1,0 +1,13 @@
+@import "../../../styles/index.scss";
+
+.footer {
+  padding: 1.6em;
+  background: $peach;
+  &__info {
+    height: 3em;
+    width: 14.5em;
+    background-color: $moccasin;
+    border-radius: 0.4em;
+    box-shadow: $box_shadow $dark_brown_yellow;
+  }
+}

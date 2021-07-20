@@ -1,0 +1,101 @@
+@import "../../styles/index.scss";
+
+.main {
+  &__content {
+    flex: 0.7;
+    background-color: $ligth_blue;
+    &-top {
+      background-color: $hotpink;
+      &-box {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding: 1.5em 0;
+      }
+      &_left {
+        width: 10.35em;
+        height: 16.5em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $ligth_blue;
+        border-radius: 1.5em;
+        box-shadow: $box_shadow $dark_brown;
+        div {
+          width: 6.88em;
+          height: 1.4em;
+          border-radius: 0.2em;
+          background-color: $white;
+        }
+      }
+      &_right {
+        width: 10.35em;
+        height: 16.5em;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $purple;
+        border-radius: 1.5em;
+        box-shadow: $box_shadow_dark $turquoise;
+        div {
+          width: 6.88em;
+          height: 1.4em;
+          margin: 1.5em 0;
+          border-radius: 0.2em;
+          background-color: $white;
+        }
+      }
+    }
+    &-bottom {
+      background-color: $lightpink;
+      &-box {
+        padding: 1.5em;
+      }
+    }
+    &-section {
+      display: flex;
+      justify-content: space-between;
+      padding: 1.5em 4em;
+      background-blend-mode: screen;
+      background: $lime_skyblue_coral;
+      border-radius: 2em;
+      div {
+        height: 11.4em;
+        width: 12em;
+        background-color: $light_purple;
+        border-radius: 1.5em;
+        box-shadow: $box_shadow $dark_brown;
+      }
+    }
+    &-columns {
+      display: flex;
+      justify-content: space-evenly;
+    }
+  }
+  .column {
+    height: 12.4em;
+    width: 9.6em;
+    display: flex;
+    flex-direction: column;
+    margin: 1em 0;
+    background-color: $turquoise;
+    border-radius: 1em;
+    box-shadow: $box_shadow $dark_brown;
+    &.right {
+      justify-content: flex-end;
+    }
+    &.left {
+      justify-content: flex-start;
+    }
+    &.center {
+      justify-content: center;
+    }
+  }
+  .column-item {
+    background-color: $light_swampy;
+    height: 2.35em;
+    border-radius: 0.4em;
+    margin: 1em 0.4em;
+  }
+}
