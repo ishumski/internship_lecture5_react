@@ -1,0 +1,29 @@
+@import './_variables.scss';
+@import './_mixins.scss';
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body {
+	max-width: 60em;
+	min-width: 18em;
+	width: 100%;
+	margin: 0 auto;
+}
+@media (max-width: 60em) {
+	body {
+		max-width: 50em;
+	}
+}
+@media (max-width: 50em) {
+	body {
+		max-width: 40em;
+	}
+}
+@media (max-width: 35em) {
+	body {
+		max-width: none;
+	}
+}

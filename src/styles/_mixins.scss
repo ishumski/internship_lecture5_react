@@ -1,0 +1,14 @@
+@mixin elementSize($w, $h) {
+	height: $h;
+	width: $w;
+}
+
+@mixin flexPlacement($dp, $fd) {
+	display: $dp;
+	flex-direction: $fd;
+}
+
+@mixin flexJustify($dp, $jc) {
+	display: $dp;
+	justify-content: $jc;
+}

@@ -1,15 +1,12 @@
-import Main from '../main/index'
-import Header from '../layout/header'
-import Footer from '../layout/footer'
+import Main from '../main'
+import { Footer, Header } from '../layout'
 
-function App() {
-	return (
-		<div className="App">
-			<Header />
-			<Main />
-			<Footer />
-		</div>
-	)
-}
+const App = () => (
+	<div className="App">
+		<Header />
+		<Main />
+		<Footer />
+	</div>
+)
 
 export default App

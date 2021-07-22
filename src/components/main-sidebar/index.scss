@@ -1,27 +1,41 @@
-@import "../../styles/index.scss";
+@import '../../styles/common.scss';
 
-.main {
-  display: flex;
-  flex-direction: row;
-  &__sidebar {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex: 0.3;
-    background-color: $ligth_blue;
-    &-list li {
-      height: 2.5em;
-      margin: 1em 1.5em;
-      list-style-type: none;
-    }
-    &-bottom {
-      height: 1.9em;
-      margin: 1em 2.5em;
-    }
-    &-list li,
-    &-bottom {
-      background: $light_pink_purple;
-      box-shadow: $box_shadow_light $light_pastel;
-    }
-  }
+.sidebar {
+	@include flexPlacement($dp: flex, $fd: column);
+	justify-content: space-between;
+	flex: .2;
+	background-color: $ligth_blue;
+	&-list li {
+		height: 2.4em;
+		margin: 1em 1.6em;
+		list-style-type: none;
+	}
+	&-bottom {
+		height: 2em;
+		margin: 1em 2.4em;
+	}
+	&-list li,
+	&-bottom {
+		background: $light_pink_purple;
+		box-shadow: $box_shadow_light $light_pastel;
+	}
+}
+
+@media (max-width: 50em) {
+	.sidebar {
+		@include flexJustify($dp: flex, $jc: center);
+		align-items: center;
+		&-list {
+			@include flexJustify($dp: flex, $jc: center);
+			flex-wrap: wrap;
+			& li {
+				width: 10em;
+			}
+		}
+		&-bottom {
+			width: 8em;
+			display: flex;
+			align-items: center;
+		}
+	}
 }

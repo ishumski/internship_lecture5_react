@@ -1,15 +1,13 @@
-import React from 'react'
+import Sidebar from '../main-sidebar'
+import Content from '../main-content'
 
-import Sidebar from '../main-sidebar/index'
-import Content from '../main-content/index'
+import './index.scss'
 
-function Main() {
-	return (
-		<main className="main">
-			<Sidebar />
-			<Content />
-		</main>
-	)
-}
+const Main = () => (
+	<main className="main">
+		<Sidebar />
+		<Content />
+	</main>
+)
 
 export default Main

@@ -1,29 +1,39 @@
-@import "../../../styles/index.scss";
+@import '../../../styles/common.scss';
 
 .header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1em 2.5em;
-  background: $peach;
-  &__box {
-    display: flex;
-    align-items: center;
-    &-logo {
-      padding: 1.8em;
-      border-radius: 50%;
-      border: 0.1em solid $pink_red;
-      box-shadow: $box_shadow $black;
-    }
-    &-title {
-      padding: 0.4em 2.5em;
-      margin-left: 1.5em;
-      box-shadow: $box_shadow $black;
-    }
-  }
-  &__registration {
-    padding: 0.8em 5em;
-    border: 0.1em solid $light_pastel;
-    box-shadow: $box_shadow $light_pastel;
-  }
+	@include flexJustify($dp: flex, $jc: space-between);
+	align-items: center;
+	padding: 1.2em 2.4em;
+	background: $peach;
+	&__box {
+		display: flex;
+		align-items: center;
+		&-logo {
+			padding: 1.6em;
+			border-radius: 50%;
+			border: 1px solid $pink_red;
+			box-shadow: $box_shadow $black;
+		}
+		&-title {
+			padding: .4em 2.4em;
+			margin-left: 1.6em;
+			box-shadow: $box_shadow $black;
+		}
+	}
+	&__registration {
+		padding: .8em 4em;
+		border: 1px solid $light_pastel;
+		box-shadow: $box_shadow $light_pastel;
+	}
+}
+
+@media (max-width: 35em) {
+	.header {
+		&__box-title {
+			display: none;
+		}
+		&__registration {
+			padding: 1em 2em;
+		}
+	}
 }
