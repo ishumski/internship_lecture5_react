@@ -1,0 +1,10 @@
+@import '../../styles/common.scss';
+
+.main {
+	@include flexPlacement($dp: flex, $fd: row);
+}
+@media (max-width: 50em) {
+	.main {
+		@include flexPlacement($dp: flex, $fd: column);
+	}
+}

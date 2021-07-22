@@ -1,0 +1,125 @@
+@import '../../styles/common.scss';
+
+.content {
+	flex: .8;
+	background-color: $ligth_blue;
+	&-top {
+		background-color: $hotpink;
+		&-box {
+			@include flexJustify($dp: flex, $jc: space-evenly);
+			flex-wrap: wrap;
+			padding: 1.6em 0;
+		}
+		&_left {
+			@include elementSize($w: 12em, $h: 16em);
+			@include flexJustify($dp: flex, $jc: center);
+			align-items: center;
+			background-color: $ligth_blue;
+			border-radius: 20px;
+			box-shadow: $box_shadow $dark_brown;
+			div {
+				@include elementSize($w: 6.4em, $h: 1.6em);
+				border-radius: 4px;
+				background-color: $white;
+			}
+		}
+		&_right {
+			@include elementSize($w: 12em, $h: 16em);
+			@include flexPlacement($dp: flex, $fd: column);
+			justify-content: space-between;
+			align-items: center;
+			background-color: $purple;
+			border-radius: 20px;
+			box-shadow: $box_shadow_dark $turquoise;
+			div {
+				@include elementSize($w: 6.4em, $h: 1.6em);
+				margin: 1.6em 0;
+				border-radius: 4px;
+				background-color: $white;
+			}
+		}
+	}
+	&-bottom {
+		background-color: $lightpink;
+		&-box {
+			padding: 1.6em;
+		}
+	}
+	&-section {
+		@include flexJustify($dp: flex, $jc: space-around);
+		padding: 1.6em 4em;
+		background-blend-mode: screen;
+		background: $lime_skyblue_coral;
+		border-radius: 12px;
+		div {
+			@include elementSize($w: 12em, $h: 12em);
+			background-color: $light_purple;
+			border-radius: 1.6em;
+			box-shadow: $box_shadow $dark_brown;
+		}
+	}
+	&-columns {
+		@include flexJustify($dp: flex, $jc: space-evenly);
+		flex-wrap: wrap;
+	}
+}
+.column {
+	@include elementSize($w: 10em, $h: 12em);
+	@include flexPlacement($dp: flex, $fd: column);
+	margin: 1em 0;
+	background-color: $turquoise;
+	border-radius: 10px;
+	box-shadow: $box_shadow $dark_brown;
+	&.right {
+		justify-content: flex-end;
+	}
+	&.left {
+		justify-content: flex-start;
+	}
+	&.center {
+		justify-content: center;
+	}
+}
+.column-item {
+	background-color: $light_swampy;
+	height: 2.4em;
+	border-radius: 0.4em;
+	margin: 1em .4em;
+}
+
+@media (max-width: 60em) {
+	.content {
+		&-section div {
+			width: 10em;
+		}
+	}
+}
+@media (max-width: 50em) {
+	.content {
+		&-top {
+			flex-wrap: wrap;
+			& article {
+				margin: .4em 0;
+			}
+		}
+		&-section {
+			@include flexJustify($dp: flex, $jc: space-evenly);
+			padding: 2em 0;
+		}
+		&-columns {
+			flex-wrap: wrap;
+		}
+	}
+}
+@media (max-width: 35em) {
+	.content {
+		&-section {
+			@include flexPlacement($dp: flex, $fd: column);
+			align-items: center;
+			padding: 1em 0;
+			div {
+				margin: .4em 0;
+			}
+		}
+	}
+}
